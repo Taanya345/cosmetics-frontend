@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetic Web Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Cosmetic Products</h1>
+  </header>
+  <main>
+    <div class="product" id="product1" onclick="showDetails('product1')">
+      <img src="https://www.lakmeindia.com/cdn/shop/products/AMAZONFOP1000X1000PX_1000x.jpg?v=1680690185" alt="Product 1">
+      <h2>Product 1</h2>
+      <p>Sunscreen</p>
+      <div class="qr-code" id="qrcode1"></div>
+    </div>
+    <div class="product" id="product2" onclick="showDetails('product2')">
+      <img src="https://m.media-amazon.com/images/I/810zUZrp2AL._AC_UF1000,1000_QL80_.jpg" alt="Product 2">
+      <h2>Product 2</h2>
+      <p>Eye shadow palette</p>
+      <div class="qr-code" id="qrcode2"></div>
+    </div>
+    <div class="product" id="product3" onclick="showDetails('product3')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdpwU9C4aKaMcTg36n5I7Mg5BORWb39pVtnwlprMxfZQ&s" alt="Product 3">
+      <h2>Product 3</h2>
+      <p>Lipstick</p>
+      <div class="qr-code" id="qrcode3"></div>
+    </div>
+    <div class="product" id="product4" onclick="showDetails('product4')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf4BF-hvZsq9wJL2NssgqxJgVxb03HHIaImWhT7VHUFw&s" alt="Product 4">
+      <h2>Product 4</h2>
+      <p>Lakme Compact Powder</p>
+      <div class="qr-code" id="qrcode4"></div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Cosmetic Company. All rights reserved.</p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-details"></div>
+      <canvas id="modal-qrcode" style="display:none;"></canvas>
+      <img id="modal-qrcode-img" src="" alt="QR Code" style="display:none;">
+    </div>
+  </div>
+</body>
+</html>
